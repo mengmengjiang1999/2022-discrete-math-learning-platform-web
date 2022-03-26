@@ -26,3 +26,6 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ## install 
 
 npm install --save axios vue-axios
+
+vue跨域请求问题如何解决
+https://www.jianshu.com/p/e87d200fa548

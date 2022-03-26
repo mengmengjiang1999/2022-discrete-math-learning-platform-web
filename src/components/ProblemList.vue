@@ -19,7 +19,7 @@ export default {
     axios.get('/problemlist')
         .then((response)=>{
             console.log(response.data)
-            this.problemlist = response.data.problemlist
+            this.problemlist = response.data   //json：algorithms
         })
         .catch((error)=>{
             console.log(error)
