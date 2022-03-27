@@ -2,6 +2,7 @@
   <div>
     <h1>{{ message }}</h1>
     <div v-html="problem"></div>
+    <p><img :src="image" ></p>
   <!-- <textarea v-model="problem"></textarea>
   <div v-html="markdownToHtml"></div> -->
   <!-- <p><strong>Promoted URLs:</strong><img src="@/assets/images/000.png"/></p> -->
@@ -14,14 +15,15 @@ import axios from "axios"
 
 // import marked from 'marked';
 export default {
-  name: 'HelloPage',
-  path: '/algorithm/dijkstra',
-  image_path: "http://127.0.0.1:5000/images/000.png",
+  // name: 'HelloPage',
+  // path: '/algorithm/dijkstra',
+  // image: "http://127.0.0.1:5000/images/000.png",
 //   /algorithm/dijkstra
   data(){
     return {
       message: this.message,
       problem: this.problem,
+      image:this.image,
     //   mark: this.mark,
       // image_path: this.image_path
     }
@@ -37,6 +39,7 @@ export default {
         this.problem = response.data.data_problem
         // this.mark= marked(this.problem)
         // this.image_path = "http://127.0.0.1:5000"+response.data.image_path
+        this.image =  "data:image/png;base64,"+ response.data.data_image
     })
     .catch((error)=>{
         console.log(error)

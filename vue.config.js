@@ -7,6 +7,7 @@ const { defineConfig } = require('@vue/cli-service')
 //vue.config.js
 
 module.exports = {
+    lintOnSave: false,
   devServer:{
     host:'0.0.0.0',
     port:'8080',
@@ -23,5 +24,5 @@ module.exports = {
             }
         }
     }
-}
+    }
 }
