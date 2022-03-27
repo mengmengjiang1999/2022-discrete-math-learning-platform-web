@@ -1,12 +1,21 @@
 <template>
   <div>
-    <h1>{{ message }}</h1>
+    <h1>{{ my_message }}</h1>
     <div v-html="problem"></div>
     <p><img :src="image" ></p>
-  <!-- <textarea v-model="problem"></textarea>
-  <div v-html="markdownToHtml"></div> -->
-  <!-- <p><strong>Promoted URLs:</strong><img src="@/assets/images/000.png"/></p> -->
-  <!-- <p><strong>Promoted URLs:</strong><img src= {{image_path}} /></p> -->
+
+    <!-- 答案输入框 -->
+    <form v-on:submit.prevent="submit()">
+      <input placeholder="答案" maxlength="15" type="text" v-model="answer" />
+    <button type="submit" class="ui-button" ><span>提交答案</span></button></form>
+
+    <!-- 显示答案是否正确 -->
+    <div v-if="status === 1">
+      答案正确
+    </div>
+    <div v-else-if="status === 2">
+      答案错误
+    </div>
   </div>
 </template>
 
@@ -21,9 +30,11 @@ export default {
 //   /algorithm/dijkstra
   data(){
     return {
-      message: this.message,
+      my_message: this.message,
       problem: this.problem,
       image:this.image,
+      answer: this.answer,
+      status: this.status,
     //   mark: this.mark,
       // image_path: this.image_path
     }
@@ -31,7 +42,9 @@ export default {
   created(){
     this.message = "求最短路"
     this.problem = " "
+    this.answer = 0
     // this.mark = " "
+    this.status = 0 //0:还未提交答案 1:已提交，答案正确 2:已提交，答案错误
     axios.get('/algorithm/dijkstra')
     .then((response)=>{
         console.log(response.data)
@@ -45,10 +58,19 @@ export default {
         console.log(error)
     })
   },
-//   computed: {
-//    markdownToHtml(){
-//      return marked(this.problem);
-//    }
-//  }
+    methods: {
+      submit() {
+          console.log("post: this.answer "+this.answer)
+          axios.post('/algorithm/dijkstra', { 'answer': this.answer} )
+              .then((res) => {
+              console.log(res.data)
+              if(res.data['answer']==true){
+                this.status=1
+              }else{
+                this.status=2
+              }
+          })
+      }
+  }
 }
 </script>
