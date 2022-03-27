@@ -45,6 +45,7 @@ export default {
     this.answer = 0
     // this.mark = " "
     this.status = 0 //0:还未提交答案 1:已提交，答案正确 2:已提交，答案错误
+    this.problem_id = -1
     axios.get('/algorithm/dijkstra')
     .then((response)=>{
         console.log(response.data)
@@ -53,6 +54,7 @@ export default {
         // this.mark= marked(this.problem)
         // this.image_path = "http://127.0.0.1:5000"+response.data.image_path
         this.image =  "data:image/png;base64,"+ response.data.data_image
+        this.problem_id = response.data.problem_id
     })
     .catch((error)=>{
         console.log(error)
@@ -61,7 +63,11 @@ export default {
     methods: {
       submit() {
           console.log("post: this.answer "+this.answer)
-          axios.post('/algorithm/dijkstra', { 'answer': this.answer} )
+          console.log("post: this.problem_id "+this.problem_id)
+          axios.post('/algorithm/dijkstra', {
+              'answer': this.answer,
+              'problem_id': this.problem_id.toString(),
+          })
               .then((res) => {
               console.log(res.data)
               if(res.data['answer']==true){
