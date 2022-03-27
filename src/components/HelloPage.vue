@@ -16,7 +16,7 @@ export default {
     }
   },
   created(){
-    this.message = "欢迎进入离散数学智能教学平台"
+    this.message = "欢迎离散数学智能教学平台"
   }
 }
 </script>
