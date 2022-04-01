@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <hello-page></hello-page>
-    <time-now></time-now>
+    <!-- <time-now></time-now> -->
     <problem-list></problem-list>
     <dijkstra></dijkstra>
   </div>
@@ -11,7 +11,7 @@
 <script>
 
 import HelloPage from './components/HelloPage.vue'
-import TimeNow from './components/TimeNow.vue'
+// import TimeNow from './components/TimeNow.vue'
 import ProblemList from './components/ProblemList.vue'
 import Dijkstra from './components/Dijkstra.vue'
 
@@ -19,7 +19,7 @@ export default {
   name: 'App',
   components: {
     HelloPage,
-    TimeNow,
+    // TimeNow,
     ProblemList,
     Dijkstra,
   }
