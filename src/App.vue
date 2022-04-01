@@ -31,7 +31,7 @@ export default {
     RegistPage,
     ProblemList,
     Dijkstra,
-    LoginPage,
+    // LoginPage,
     LogoutPage,
     ClearSsession,
   }
