@@ -47,3 +47,8 @@ https://www.arthurkoziel.com/convert-md-to-html-pandoc/
 
 后端给前端显示图片
 https://stackoverflow.com/questions/8499633/how-to-display-base64-images-in-html
+
+npm install -D less less-loader
+
+<script src="https://unpkg.com/vue"></script>
+<script src="https://unpkg.com/vue-router"></script>

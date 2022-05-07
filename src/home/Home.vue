@@ -1,0 +1,7 @@
+<template src="./Home.html"></template>
+<script>
+// import axios from "axios"
+
+export default {
+}
+</script>

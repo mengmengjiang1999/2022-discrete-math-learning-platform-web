@@ -1,7 +1,7 @@
 <template>
-  <div id="app">
+  <div>
+    Hello World!
     <hello-page></hello-page>
-    <login-page></login-page>
     <regist-page></regist-page>
     <logout-page></logout-page>
     <clear-ssession></clear-ssession>
@@ -14,10 +14,9 @@
 <script>
 
 import HelloPage from './components/HelloPage.vue'
-// import TimeNow from './components/TimeNow.vue'
+import TimeNow from './components/TimeNow.vue'
 import ProblemList from './components/ProblemList.vue'
 import Dijkstra from './components/Dijkstra.vue'
-import LoginPage from './components/LoginPage.vue'
 import RegistPage from './components/RegistPage.vue'
 import LogoutPage from './components/LogoutPage.vue'
 import ClearSsession from './components/ClearSession.vue'
@@ -26,8 +25,7 @@ export default {
   name: 'App',
   components: {
     HelloPage,
-    // TimeNow,
-    LoginPage,
+    TimeNow,
     RegistPage,
     ProblemList,
     Dijkstra,

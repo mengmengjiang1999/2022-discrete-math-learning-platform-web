@@ -50,18 +50,39 @@ module.exports = {
     //         chunks: ['chunk-vendors', 'chunk-common', 'mobile']
     //     },
     // },
-    // pages:{
-    //     // 先配置主页
-    //     index: {
-    //         entry: './src/main.js',
-    //         template: './public/index.html',
-    //         title: 'main'
-    //     },
-    //     // 再配置各个子页面：登录后课表查询页
-    //     login: {
-    //         entry: './src/pages/login/login.js',
-    //         template: './public/login.html',
-    //         title: 'login'
-    //     }
-    // }
+    pages:{
+        // 先配置主页
+        index: {
+            entry: './src/main.js',
+            template: './public/index.html',
+            filename: 'index.html',
+            title: 'main',
+            // 在这个页面中包含的块，默认情况下会包含
+            // 提取出来的通用 chunk 和 vendor chunk。
+            chunks: ['chunk-vendors', 'chunk-common', 'index']
+        },
+        // 再配置各个子页面：登录后课表查询页
+        login: {
+            // entry: './src/pages/login/login.js',
+            // template: './public/login.html',
+            // title: 'login'
+
+            entry: 'src/login/main.js',
+            template: 'public/login.html',
+            // 在 dist/index.html 的输出
+            filename: 'login.html',
+            title: 'Login',
+        },
+        home: {
+            // entry: './src/pages/login/login.js',
+            // template: './public/login.html',
+            // title: 'login'
+
+            entry: 'src/home/main.js',
+            template: 'public/home.html',
+            // 在 dist/index.html 的输出
+            filename: 'home.html',
+            title: 'Home',
+        },
+    }
 }

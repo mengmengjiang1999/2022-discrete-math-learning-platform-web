@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="hello-page">
     <h1>{{ message }}</h1>
   </div>
 </template>
@@ -10,13 +10,16 @@ export default {
   // props: {
   //   msg: String
   // },
+  props:{
+
+  },
   data(){
     return {
       message: this.message
     }
   },
   created(){
-    this.message = "欢迎离散数学智能教学平台"
+    this.message = "欢迎进入离散数学智能教学平台"
   }
 }
 </script>

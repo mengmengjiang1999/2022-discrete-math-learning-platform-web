@@ -1,13 +1,20 @@
-import App from './App.vue'
+// import App from './App.vue'
+// import Login from './Login.vue'
 
-const routers = [
-  {
-    path: '/app',
-    name: 'app',
-    component: App
-  },  {
-    path: '/',
-    component: App
-  },
-]
-export default routers
+// const routes = [
+//   {
+//     path: '/app',
+//     name: 'app',
+//     component: App
+//   },  
+//   {
+//     path: '/login',
+//     name: 'login',
+//     component: Login
+//   },  
+//   {
+//     path: '/',
+//     component: Login
+//   },
+// ]
+// export default routes
