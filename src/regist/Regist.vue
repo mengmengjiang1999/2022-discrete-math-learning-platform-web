@@ -26,19 +26,6 @@ export default {
       RegistPage,
     },
     methods: {
-      // submit() {
-      //     console.log("post: this.username "+this.username)
-      //     console.log("post: this.password "+this.password)
-      //     let data = {
-      //         'username': this.username,
-      //         'password': this.password,
-      //     }
-      //     console.log(data)
-      //     axios.post('/regist', data)
-      //         .then((res) => {
-      //         console.log(res.data)
-      //     })
-      // }
   }
 }
 </script>

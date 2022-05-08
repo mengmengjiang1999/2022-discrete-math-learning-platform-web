@@ -1,21 +1,12 @@
 <template>
   <div>
-    <!-- Hello World! -->
     <hello-page></hello-page>
-    <!-- <login-page></login-page> -->
-    <!-- <regist-page></regist-page> -->
+    <!-- <status-bar></status-bar> -->
+    <login-status></login-status>
+    <direct-bar></direct-bar>
+    <!-- <status-bar :username="username"></status-bar> -->
     <logout-page></logout-page>
-    <h3>Login</h3>
-    <ul>
-      <li><a href="/login" rel="noopener">Login</a></li>
-    </ul>
-    <h3>Regist</h3>
-    <ul>
-      <li><a href="/regist" rel="noopener">Regist</a></li>
-    </ul>
-    <!-- <clear-ssession></clear-ssession> -->
     <problem-list></problem-list>
-    <!-- <dijkstra></dijkstra> -->
   </div>
 </template>
 
@@ -23,25 +14,47 @@
 <script>
 
 import HelloPage from './components/HelloPage.vue'
-import TimeNow from './components/TimeNow.vue'
 import ProblemList from './components/ProblemList.vue'
 import Dijkstra from './components/Dijkstra.vue'
 import RegistPage from './components/RegistPage.vue'
 import LoginPage from './components/LoginPage.vue'
 import LogoutPage from './components/LogoutPage.vue'
-import ClearSsession from './components/ClearSession.vue'
+import DirectBar from './components/DirectBar.vue'
+import GotoButton from './components/GotoButton.vue'
+// import StatusBar from './components/StatusBar.vue'
+import LoginStatus from './components/LoginStatus.vue'
 
 export default {
   name: 'App',
   components: {
     HelloPage,
-    TimeNow,
     RegistPage,
     ProblemList,
     Dijkstra,
     LoginPage,
     LogoutPage,
-    ClearSsession,
+    DirectBar,
+    GotoButton,
+    // StatusBar,
+    LoginStatus,
+  },
+  created(){
+  },
+  methods:{
+    login_status(){
+      axios.post('/login_status')
+          .then((res) => {
+          console.log(res.data)
+          if(res.data['status'][0]==true){
+              // this.$router.push('/home')
+              // <Redirect to="/" />
+              console.log("success")
+              window.location.href = "/";
+          }else{
+              console.log("wrong!")
+          }
+      })
+    }
   }
 }
 </script>

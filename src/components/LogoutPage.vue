@@ -29,6 +29,7 @@ export default {
           axios.post('/logout')
               .then((res) => {
               console.log(res.data)
+              window.location.href = "/";
           })
       }
   }
