@@ -1,12 +1,23 @@
 <template>
-  <div>
-
-    <direct-bar></direct-bar>
+  <direct-bar></direct-bar>
+  <div class="container">
+  <div class="row">
+     <!-- style="border:solid 1px red" -->
+  </div>
+  <div class ="row">
+    <div class="col-6">
     <div class="page-header">
     <h2>题目列表
     </h2></div>
-    <problem-list></problem-list>
+    </div>
   </div>
+  <div class="row">
+    <div class="col-6">
+    <problem-list></problem-list>
+    </div>
+  </div>
+</div>
+
 </template>
 
 <script>

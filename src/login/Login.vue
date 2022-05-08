@@ -1,17 +1,36 @@
 <template>
-  <div>
-      <!-- LOGIN -->
-    <h1>登录</h1>
-    <direct-bar></direct-bar>
-    
-    <login-page></login-page>
-    <h3>没有账号？去注册</h3>
-    <ul>
-      <li><a href="/regist" rel="noopener">注册</a></li>
-    </ul>
-    <ul>
-      <li><a href="/" rel="noopener">主页</a></li>
-    </ul>
+
+  <direct-bar></direct-bar>
+
+  <div class="container">
+    <div class="col-md-6 offset-md-3">
+
+      <div class="card" style="margin-top:5rem">
+        <h5 class="card-header">
+          登录
+        </h5>
+        <div class="card-body">
+          <form v-on:submit.prevent="submit()">
+            <div class="form-group input-group">
+              <input type="text" class="form-control" id="input-domain" placeholder="用户名" v-model="username">
+            </div>
+
+            <div class="form-group relative">
+              <input type="password" class="form-control" id="input-password" placeholder="密码" v-model="password">
+              <div id="btn-eye-password" class="btn-eye" data-password-target="#input-password">
+                <i class="fa fa-lg fa-eye" aria-hidden="true"></i>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <button type="submit" class="btn btn-success btn-gen w-100" id="btn-gen">登录</button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+
+    </div>
   </div>
 </template>
 
@@ -28,6 +47,24 @@ export default {
       DirectBar,
     },
     methods: {
+      submit() {
+          let data = {
+              'username': this.username,
+              'password': this.password,
+          }
+          console.log(data)
+          axios.post('/login', data)
+              .then((res) => {
+              console.log(res.data)
+              if(res.data['status'][0]==true){
+                  // this.$router.push('/home')
+                  // <Redirect to="/" />
+                  window.location.href = "/";
+              }else{
+                  console.log("wrong!")
+              }
+          })
+      }
     }
 }
 </script>

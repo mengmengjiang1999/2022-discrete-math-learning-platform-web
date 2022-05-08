@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <!-- <div>
     <h1>注册</h1>
     <direct-bar></direct-bar>
     <regist-page></regist-page>
@@ -7,7 +7,55 @@
     <ul>
       <li><a href="/login" rel="noopener">登录</a></li>
     </ul>
+  </div> -->
+
+   <direct-bar></direct-bar>
+
+  <div class="container">
+    <div class="col-md-6 offset-md-3">
+
+      <div class="card" style="margin-top:5rem">
+        <h5 class="card-header">
+          注册
+        </h5>
+        <div class="card-body">
+          <form v-on:submit.prevent="submit()">
+            <div class="form-group input-group">
+              <input type="text" class="form-control" id="input-domain" placeholder="用户名" v-model="username">
+            </div>
+
+            <div class="form-group relative">
+              <input type="password" class="form-control" id="input-password" placeholder="密码" v-model="password1">
+              <div id="btn-eye-password" class="btn-eye" data-password-target="#input-password">
+                <i class="fa fa-lg fa-eye" aria-hidden="true"></i>
+              </div>
+            </div>
+
+            <div class="form-group relative">
+              <input type="password" class="form-control" id="input-password" placeholder="确认密码" v-model="password2">
+              <div id="btn-eye-password" class="btn-eye" data-password-target="#input-password">
+                <i class="fa fa-lg fa-eye" aria-hidden="true"></i>
+              </div>
+            </div>
+
+            <div class="form-group relative">
+              <input type="password" class="form-control" id="input-password" placeholder="邮箱" v-model="email">
+              <div id="btn-eye-password" class="btn-eye" data-password-target="#input-password">
+                <i class="fa fa-lg fa-eye" aria-hidden="true"></i>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <button type="submit" class="btn btn-success btn-gen w-100" id="btn-gen">注册</button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+
+    </div>
   </div>
+
 </template>
 
 <script>
@@ -23,6 +71,19 @@ export default {
       DirectBar,
     },
     methods: {
+      submit() {
+          let data = {
+              'username': this.username,
+              'password1': this.password1,
+              'password2': this.password2,
+              'email': this.email,
+          }
+          console.log(data)
+          axios.post('/regist', data)
+              .then((res) => {
+              console.log(res.data)
+          })
+      }
   }
 }
 </script>

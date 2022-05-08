@@ -82,7 +82,7 @@ import axios from 'axios'	       // 引入 axios
 //   routes, // `routes: routes` 的缩写
 // })
 
-axios.defaults.baseURL='http://127.0.0.1:8080/api/'
+axios.defaults.baseURL='/api/'
 // axios.defaults.baseURL='/api'
 
 // 5. 创建并挂载根实例
