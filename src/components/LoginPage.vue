@@ -47,21 +47,19 @@ export default {
   },
     methods: {
       submit() {
-          console.log("post: this.username "+this.username)
-          console.log("post: this.password "+this.password)
+          // console.log("post: this.username "+this.username)
+          // console.log("post: this.password "+this.password)
+          // let data = {
+          //     'username': this.username,
+          //     'password': this.password,
+          // }
           let data = {
-              'username': this.username,
-              'password': this.password,
+            '233': 2333
           }
           console.log(data)
-          axios.post('/login', data)
+          axios.post('/test', data)
               .then((res) => {
               console.log(res.data)
-            //   if(res.data['data']==true){
-            //     this.status=1
-            //   }else{
-            //     this.status=2
-            //   }
           })
       }
   }

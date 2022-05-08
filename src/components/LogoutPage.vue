@@ -26,10 +26,6 @@ export default {
   },
     methods: {
       submit() {
-          // data = {
-
-          // }
-          // console.log(data)
           axios.post('/logout')
               .then((res) => {
               console.log(res.data)

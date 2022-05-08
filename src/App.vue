@@ -1,12 +1,13 @@
 <template>
   <div>
-    Hello World!
+    <!-- Hello World! -->
     <hello-page></hello-page>
-    <regist-page></regist-page>
-    <logout-page></logout-page>
-    <clear-ssession></clear-ssession>
+    <login-page></login-page>
+    <!-- <regist-page></regist-page> -->
+    <!-- <logout-page></logout-page> -->
+    <!-- <clear-ssession></clear-ssession> -->
     <problem-list></problem-list>
-    <dijkstra></dijkstra>
+    <!-- <dijkstra></dijkstra> -->
   </div>
 </template>
 
@@ -18,6 +19,7 @@ import TimeNow from './components/TimeNow.vue'
 import ProblemList from './components/ProblemList.vue'
 import Dijkstra from './components/Dijkstra.vue'
 import RegistPage from './components/RegistPage.vue'
+import LoginPage from './components/LoginPage.vue'
 import LogoutPage from './components/LogoutPage.vue'
 import ClearSsession from './components/ClearSession.vue'
 
@@ -29,7 +31,7 @@ export default {
     RegistPage,
     ProblemList,
     Dijkstra,
-    // LoginPage,
+    LoginPage,
     LogoutPage,
     ClearSsession,
   }
