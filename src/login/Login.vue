@@ -6,13 +6,11 @@
     <div v-html="problem"></div>
     <p><img :src="image" ></p>
     <div>LOGIN</div>
-    <!-- 输入框
-    <form v-on:submit.prevent="submit()">
-      <tr><input placeholder="用户名" maxlength="15" type="text" v-model="username" /></tr>
-      <tr><input placeholder="密码" maxlength="15" type="text" v-model="password" /></tr>
-      <tr><button type="submit" class="ui-button" ><span>登录</span></button></tr>
-    </form> -->
     <login-page></login-page>
+    <h3>Regist</h3>
+    <ul>
+      <li><a href="/regist" rel="noopener">Regist</a></li>
+    </ul>
   </div>
 </template>
 
@@ -26,29 +24,7 @@ export default {
     components:{
       LoginPage,
     },
-    // data(){
-    //   return {
-    //       username: this.username,
-    //       password: this.password,
-    //   }
-    // },
-//   created(){
-//   },
     methods: {
-      submit() {
-          // console.log("post: this.username "+this.username)
-          // console.log("post: this.password "+this.password)
-          let data = {
-              // 'username': this.username,
-              // 'password': this.password,
-              '233': 233,
-          }
-          // console.log(data)
-          axios.post('/test', data)
-              .then((res) => {
-              console.log(res.data)
-          })
-      }
     }
 }
 </script>

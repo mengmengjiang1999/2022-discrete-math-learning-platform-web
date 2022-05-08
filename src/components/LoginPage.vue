@@ -26,40 +26,27 @@ export default {
     return {
         username: this.username,
         password: this.password,
-    //   my_message: this.message,
-    //   problem: this.problem,
-    //   image:this.image,
-    //   answer: this.answer,
-    //   status: this.status,
     }
   },
   created(){
-    // axios.post('/login')
-    // .then((response)=>{
-    //     console.log(response.data)
-    //     // this.problem = response.data.data_problem
-    //     // this.image =  "data:image/png;base64,"+ response.data.data_image
-    //     // this.problem_id = response.data.problem_id
-    // })
-    // .catch((error)=>{
-    //     console.log(error)
-    // })
   },
     methods: {
       submit() {
-          // console.log("post: this.username "+this.username)
-          // console.log("post: this.password "+this.password)
-          // let data = {
-          //     'username': this.username,
-          //     'password': this.password,
-          // }
           let data = {
-            '233': 2333
+              'username': this.username,
+              'password': this.password,
           }
           console.log(data)
-          axios.post('/test', data)
+          axios.post('/login', data)
               .then((res) => {
               console.log(res.data)
+              if(res.data['status'][0]==true){
+                  // this.$router.push('/home')
+                  // <Redirect to="/" />
+                  window.location.href = "/";
+              }else{
+                  console.log("wrong!")
+              }
           })
       }
   }

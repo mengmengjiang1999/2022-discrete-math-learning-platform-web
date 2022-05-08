@@ -1,4 +1,7 @@
 import { createApp } from 'vue'
 import App from './Regist.vue'
 
-createApp(App).mount('#Regist')
+import axios from 'axios'
+axios.defaults.baseURL='http://127.0.0.1:8080/api/'
+
+createApp(App).mount('#regist')

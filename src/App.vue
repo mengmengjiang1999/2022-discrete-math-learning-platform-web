@@ -2,9 +2,17 @@
   <div>
     <!-- Hello World! -->
     <hello-page></hello-page>
-    <login-page></login-page>
+    <!-- <login-page></login-page> -->
     <!-- <regist-page></regist-page> -->
-    <!-- <logout-page></logout-page> -->
+    <logout-page></logout-page>
+    <h3>Login</h3>
+    <ul>
+      <li><a href="/login" rel="noopener">Login</a></li>
+    </ul>
+    <h3>Regist</h3>
+    <ul>
+      <li><a href="/regist" rel="noopener">Regist</a></li>
+    </ul>
     <!-- <clear-ssession></clear-ssession> -->
     <problem-list></problem-list>
     <!-- <dijkstra></dijkstra> -->
