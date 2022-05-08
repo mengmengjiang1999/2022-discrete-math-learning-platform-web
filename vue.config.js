@@ -60,6 +60,12 @@ module.exports = {
             template: 'public/problems.html',
             filename: 'problems.html',
             title: 'Problems',
+        },
+        problem:{
+            entry: 'src/problem/main.js',
+            template: 'public/problem.html',
+            filename: 'problem.html',
+            title: 'Problem',
         }
     }
 }

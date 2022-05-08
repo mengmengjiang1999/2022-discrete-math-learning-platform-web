@@ -5,11 +5,13 @@
         {{ item['problem'] }}
     </tr> -->
 
-    <ul class="nav flex-column">
-      <li class="nav-item" v-for="item in problemlist" :key="item">
-        <a class="nav-link active" aria-current="page" href="/">{{ item['problem'] }}</a>
-      </li>
-  </ul>
+    <table class="table">
+      <tbody>
+      <tr class="nav-item" v-for="item in problemlist" :key="item">
+        <a class="nav-link active" aria-current="page" :href="'/problem?p=' + item.problem">{{ item['problem'] }}</a>
+      </tr>
+      </tbody>
+    </table>
   </div>
 </template>
 

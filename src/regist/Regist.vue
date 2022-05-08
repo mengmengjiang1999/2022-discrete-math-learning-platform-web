@@ -20,38 +20,39 @@
         </h5>
         <div class="card-body">
           <form v-on:submit.prevent="submit()">
-            <div class="form-group input-group">
+            <div class="mb-3">
               <input type="text" class="form-control" id="input-domain" placeholder="用户名" v-model="username">
             </div>
 
-            <div class="form-group relative">
+            <div class="mb-3">
               <input type="password" class="form-control" id="input-password" placeholder="密码" v-model="password1">
               <div id="btn-eye-password" class="btn-eye" data-password-target="#input-password">
                 <i class="fa fa-lg fa-eye" aria-hidden="true"></i>
               </div>
             </div>
 
-            <div class="form-group relative">
+            <div class="mb-3">
               <input type="password" class="form-control" id="input-password" placeholder="确认密码" v-model="password2">
               <div id="btn-eye-password" class="btn-eye" data-password-target="#input-password">
                 <i class="fa fa-lg fa-eye" aria-hidden="true"></i>
               </div>
             </div>
 
-            <div class="form-group relative">
+            <div class="mb-3">
               <input type="password" class="form-control" id="input-password" placeholder="邮箱" v-model="email">
               <div id="btn-eye-password" class="btn-eye" data-password-target="#input-password">
                 <i class="fa fa-lg fa-eye" aria-hidden="true"></i>
               </div>
             </div>
 
-            <div class="form-group">
+            <div>
               <button type="submit" class="btn btn-success btn-gen w-100" id="btn-gen">注册</button>
             </div>
 
           </form>
         </div>
       </div>
+      <span>已有账号？去<a href="/login" rel="noopener">登录</a></span>
 
     </div>
   </div>
