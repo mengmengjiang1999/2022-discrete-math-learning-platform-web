@@ -55,5 +55,11 @@ module.exports = {
             filename: 'home.html',
             title: 'Home',
         },
+        problems:{
+            entry: 'src/problems/main.js',
+            template: 'public/problems.html',
+            filename: 'problems.html',
+            title: 'Problems',
+        }
     }
 }

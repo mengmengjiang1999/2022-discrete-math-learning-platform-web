@@ -6,7 +6,7 @@
     <direct-bar></direct-bar>
     <!-- <status-bar :username="username"></status-bar> -->
     <logout-page></logout-page>
-    <problem-list></problem-list>
+    <!-- <problem-list></problem-list> -->
   </div>
 </template>
 

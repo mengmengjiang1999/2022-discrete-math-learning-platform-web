@@ -8,19 +8,17 @@ import App from './App.vue'
 
 import axios from 'axios'	       // 引入 axios
 
-// // import VueAxios from 'vue-axios'
 
-// import { createRouter, createWebHashHistory, Router} from 'vue-router'
+// import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 
-// // Vue.use(VueRouter)
+// Install BootstrapVue
+// Vue.use(BootstrapVue)
+// Optionally install the BootstrapVue icon components plugin
+// Vue.use(IconsPlugin)
 
-// // import routers from './router'
-
-// // const router = new VueRouter({
-// //     mode: 'history',
-// //     routes: routers,
-// // })
-
+// import 'bootstrap/dist/css/bootstrap.css'
+// import 'bootstrap-vue/dist/bootstrap-vue.css'
+// import './custom.scss'
 
 // // 2. 定义一些路由
 // // 每个路由都需要映射到一个组件。

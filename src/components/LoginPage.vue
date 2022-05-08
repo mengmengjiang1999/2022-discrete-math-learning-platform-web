@@ -8,7 +8,8 @@
     <form v-on:submit.prevent="submit()">
       <tr><input placeholder="用户名" maxlength="15" type="text" v-model="username" /></tr>
       <tr><input placeholder="密码" maxlength="15" type="text" v-model="password" /></tr>
-      <tr><button type="submit" class="ui-button" ><span>登录</span></button></tr>
+      <!-- <tr><button type="submit" class="ui-button" ><span>登录</span></button></tr> -->
+      <button type="submit" class="btn btn-secondary">登录</button>
     </form>
 
   </div>

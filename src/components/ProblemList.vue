@@ -1,13 +1,15 @@
 <template>
   <div>
-    <h2>{{ title }}</h2>
-    <!-- <h3>{{ problemlist }}</h3> -->
-    <tr v-for="item in problemlist" :key="item">
+    <!-- <h2>{{ title }}</h2> -->
+    <!-- <tr v-for="item in problemlist" :key="item">
         {{ item['problem'] }}
-    </tr>
-    <!-- <el-button v-for="item in problemlist" :key="item">
-      {{ item['problem'] }}
-    </el-button> -->
+    </tr> -->
+
+    <ul class="nav flex-column">
+      <li class="nav-item" v-for="item in problemlist" :key="item">
+        <a class="nav-link active" aria-current="page" href="/">{{ item['problem'] }}</a>
+      </li>
+  </ul>
   </div>
 </template>
 

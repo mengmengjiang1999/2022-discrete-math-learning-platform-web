@@ -1,19 +1,8 @@
 <template>
   <div>
-    <h1>{{ my_message }}</h1>
-    <div v-html="problem"></div>
-    <p><img :src="image" ></p>
-
-    <!-- <h3 v-if="my_status==true">您已登陆！</h3>
-    <h3 v-else>您未登录！</h3> -->
     <form v-on:submit.prevent="submit()" v-if="my_status==true">
       <tr><button type="submit" class="ui-button" ><span>退出登录</span></button></tr>
     </form>
-
-    <!-- 输入框 -->
-    <!-- <form v-on:submit.prevent="submit()">
-      <tr><button type="submit" class="ui-button" ><span>退出登录</span></button></tr>
-    </form> -->
 
   </div>
 </template>

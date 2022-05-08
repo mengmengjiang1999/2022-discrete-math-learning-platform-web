@@ -1,15 +1,19 @@
 <template>
-  <div class="hello-page">
+  <!-- <div class="hello-page">
     <h1>{{ message }}</h1>
+  </div> -->
+  <!-- <div> -->
+    <div class="page-header">
+    <h1>欢迎进入离散数学智能教学平台
+        <!-- <small>子标题</small> -->
+    </h1>
+<!-- </div> -->
   </div>
 </template>
 
 <script>
 export default {
   name: 'HelloPage',
-  // props: {
-  //   msg: String
-  // },
   props:{
 
   },

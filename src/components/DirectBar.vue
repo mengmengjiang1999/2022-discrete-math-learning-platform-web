@@ -1,21 +1,47 @@
 <template>
 <div>
-    <!-- <goto-button :myname="Login" :myurl="login"></goto-button>
-    <goto-button :myname="Regist" :myurl="regist"></goto-button> -->
-    <!-- <goto-button :myname="Login" :myurl="login"></goto-button> -->
+    <!-- <ul class="nav justify-content-center">
+    <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="/">主页</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/login">登录</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/regist">注册</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active" href="/problems">题目列表</a>
+    </li>
+    </ul> -->
 
-    <!-- <h3>display: flex</h3> -->
-    <div class="display-flex">
-    <div class="div-size">
-            <a href="/login" rel="noopener">登陆</a>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">主页</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/problems">题目列表</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            用户
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="/login">登录</a></li>
+            <li><a class="dropdown-item" href="/regist">注册</a></li>
+            <!-- <li>
+                <a class="dropdown-item" href="/">退出登录</a>
+            </li> -->
+          </ul>
+        </li>
+      </ul>
     </div>
-    <div class="div-size">
-            <a href="/regist" rel="noopener">注册</a>
-    </div>
-    <!-- <div class="div-size">3</div> -->
-    </div>
-    
-        
+  </div>
+</nav>
 
 </div>
 </template>
