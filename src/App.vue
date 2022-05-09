@@ -1,9 +1,14 @@
 <template>
   <div>
-    <hello-page></hello-page>
-    <!-- <status-bar></status-bar> -->
-    <login-status></login-status>
     <direct-bar></direct-bar>
+    <!-- <div class="container"> -->
+    <!-- <div class="col-md-6 offset-md-3"> -->
+      <hello-page></hello-page>
+      <login-status></login-status>
+    <!-- </div> -->
+    <!-- </div> -->
+    
+    <!-- <status-bar></status-bar> -->
     <!-- <status-bar :username="username"></status-bar> -->
     <logout-page></logout-page>
     <!-- <problem-list></problem-list> -->
