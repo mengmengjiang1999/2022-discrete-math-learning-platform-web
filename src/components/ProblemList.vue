@@ -5,10 +5,17 @@
         {{ item['problem'] }}
     </tr> -->
 
-    <table class="table">
+    <table class="table table-striped">
+      <thead>
+      <tr class="mmj-table-header">
+        <th class="">题目编号</th>
+        <th class="">题目名称</th>
+      </tr>
+      </thead>
       <tbody>
-      <tr class="nav-item" v-for="item in problemlist" :key="item">
-        <a class="nav-link active" aria-current="page" :href="'/problem?p=' + item.problem">{{ item['problem'] }}</a>
+      <tr class="" v-for="item in problemlist" :key="item">
+        <td class="">{{ item['id'] }}</td>
+        <td class=""><a class="mmj-table-item" aria-current="page" :href="'/problem?p=' + item.problem">{{ item['problem'] }}</a></td>
       </tr>
       </tbody>
     </table>
@@ -42,3 +49,11 @@ export default {
   }
 }
 </script>
+
+<style >
+.mmj-table-item{
+    /* border-bottom: 1px solid #e8e8e8; */
+    color: #3498db;
+    text-decoration: none;
+}
+</style>

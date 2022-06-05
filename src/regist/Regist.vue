@@ -21,7 +21,7 @@
         <div class="card-body">
           <form v-on:submit.prevent="submit()">
             <div class="mb-3">
-              <input type="text" class="form-control" id="input-domain" placeholder="用户名" v-model="username">
+              <input type="text" class="form-control" id="input-username" placeholder="用户名" v-model="username">
             </div>
 
             <div class="mb-3">
@@ -32,14 +32,14 @@
             </div>
 
             <div class="mb-3">
-              <input type="password" class="form-control" id="input-password" placeholder="确认密码" v-model="password2">
+              <input type="password" class="form-control" id="input-password2" placeholder="确认密码" v-model="password2">
               <div id="btn-eye-password" class="btn-eye" data-password-target="#input-password">
                 <i class="fa fa-lg fa-eye" aria-hidden="true"></i>
               </div>
             </div>
 
             <div class="mb-3">
-              <input type="password" class="form-control" id="input-password" placeholder="邮箱" v-model="email">
+              <input type="text" class="form-control" id="input-mail" placeholder="邮箱" v-model="email">
               <div id="btn-eye-password" class="btn-eye" data-password-target="#input-password">
                 <i class="fa fa-lg fa-eye" aria-hidden="true"></i>
               </div>

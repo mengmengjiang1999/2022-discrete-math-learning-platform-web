@@ -67,8 +67,8 @@ module.exports = {
             filename: 'problem.html',
             title: 'Problem',
         },
-        recoreds:{
-            entry: 'src/recored/main.js',
+        records:{
+            entry: 'src/records/main.js',
             template: 'public/records.html',
             filename: 'records.html',
             title: 'Records',

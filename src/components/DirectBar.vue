@@ -15,8 +15,7 @@
     </li>
     </ul> -->
 
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark mmj-direct">
   <div class="container-fluid">
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
@@ -27,7 +26,7 @@
           <a class="nav-link" href="/problems">题目列表</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/problems">做题记录</a>
+          <a class="nav-link" href="/records">做题记录</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -61,3 +60,12 @@ export default {
     },
 }
 </script>
+
+<style>
+  .mmj-direct{
+      background: linear-gradient(
+  90deg
+  , rgb(35, 37, 38), rgb(65, 67, 69));
+      filter: blur(0px) brightness(100%);
+}
+</style>

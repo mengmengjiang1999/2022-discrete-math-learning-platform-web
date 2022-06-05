@@ -3,7 +3,8 @@
     <h1>{{ message }}</h1>
   </div> -->
   <!-- <div> -->
-    <div class="page-header">
+    <div class="page-header mt-5 mb-3">
+      <!-- <div class="page-header mt-5 mb-3"> -->
     <h1>欢迎进入离散数学智能教学平台
         <!-- <small>子标题</small> -->
     </h1>

@@ -1,0 +1,53 @@
+<template>
+  <div>
+    <!-- <h2>{{ title }}</h2> -->
+    <!-- <tr v-for="item in problemlist" :key="item">
+        {{ item['problem'] }}
+    </tr> -->
+
+    <table class="table">
+      <tbody>
+      <tr class="nav-item" v-for="item in problemlist" :key="item">
+        <a class="nav-link active" aria-current="page" :href="'/problem?p=' + item.problem">{{ item['problem'] }}</a>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</template>
+
+<script>
+import axios from "axios"
+// import VueElElements from 'vue-el-element'
+// import { ElButton } from 'vue-el-element'
+// import { ElButton } from 'element-plus'
+export default {
+  name: 'ProblemList',
+  data(){
+    return {
+      title: this.title,
+      problemlist: this.problemlist
+    }
+  },
+  created(){
+    this.title = "题目列表",
+    this.problemlist = [
+            {
+                'problem': '单源最短路',
+                'algorithm': 'dijkstra',
+            },
+            {
+                'problem': '旅行商问题',
+                'algorithm': 'fzdjf',
+            },
+            {
+                'problem': '支撑树计数',
+                'algorithm': 'treecnt',
+            },
+            {
+                'problem': '根数计数',
+                'algorithm': 'rootcnt',
+            },
+        ]
+  }
+}
+</script>

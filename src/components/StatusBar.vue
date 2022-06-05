@@ -1,7 +1,9 @@
 <template>
 <div>
     <!-- <h3>{{username}}</h3> -->
-    <h3>您已登陆！</h3>
+    <div class="page-header mt-5 mb-3">
+    <h3>您已登录！</h3>
+    </div>
 </div>
 </template>
 
