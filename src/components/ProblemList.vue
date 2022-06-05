@@ -15,7 +15,7 @@
       <tbody>
       <tr class="" v-for="item in problemlist" :key="item">
         <td class="">{{ item['id'] }}</td>
-        <td class=""><a class="mmj-table-item" aria-current="page" :href="'/problem?p=' + item.problem">{{ item['problem'] }}</a></td>
+        <td class=""><a class="mmj-table-item" aria-current="page" :href="'/problem?problem_type=' + item.problem_type">{{ item['problem_name'] }}</a></td>
       </tr>
       </tbody>
     </table>

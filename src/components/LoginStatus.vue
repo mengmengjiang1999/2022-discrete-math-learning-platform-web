@@ -1,7 +1,7 @@
 <template>
 <div>
     <!-- <h3>{{username}}</h3> -->
-    <h3 v-if="my_status==true">您已登陆！</h3>
+    <h3 v-if="my_status==true">您已登录！</h3>
     <h3 v-else>您未登录！</h3>
 </div>
 </template>

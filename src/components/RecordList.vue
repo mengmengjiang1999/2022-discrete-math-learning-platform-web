@@ -13,7 +13,7 @@
       <tbody>
       <tr class="" v-for="item in recordlist" :key="item">
         <td class="">{{ item['id'] }}</td>
-        <td class=""><a class="mmj-table-item" aria-current="page" :href="'/records?problem_id=' + item.problem_id">{{ item['problem_type'] }}</a></td>
+        <td class=""><a class="mmj-table-item" aria-current="page" :href="'/problem?problem_id=' + item.problem_id">{{ item['problem_type'] }}</a></td>
         <td class="">{{ item['problem_time'] }}</td>
         <td class="">{{ item['problem_status'] }}</td>
       </tr>
@@ -32,9 +32,6 @@
 
 <script>
 import axios from "axios"
-// import VueElElements from 'vue-el-element'
-// import { ElButton } from 'vue-el-element'
-// import { ElButton } from 'element-plus'
 export default {
   name: 'Record',
   data(){

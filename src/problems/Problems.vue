@@ -14,7 +14,6 @@
   <div class="row">
     <div class="col-6">
     <problem-list></problem-list>
-    <!-- <problem-list-example></problem-list-example> -->
     </div>
   </div>
 </div>
