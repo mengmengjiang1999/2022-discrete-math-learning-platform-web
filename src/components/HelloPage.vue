@@ -5,7 +5,7 @@
   <!-- <div> -->
     <div class="page-header mt-5 mb-3">
       <!-- <div class="page-header mt-5 mb-3"> -->
-    <h1>欢迎进入离散数学智能教学平台
+    <h1 class="mmj-header">欢迎进入离散数学智能教学平台
         <!-- <small>子标题</small> -->
     </h1>
 <!-- </div> -->
@@ -28,3 +28,10 @@ export default {
   }
 }
 </script>
+
+<style>
+.mmj-header{
+    font-size: 72px !important;
+    line-height: 108px !important;
+}
+</style>

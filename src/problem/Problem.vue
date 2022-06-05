@@ -1,17 +1,17 @@
 <template>
   <direct-bar></direct-bar>
 
-  <div class="container">
+  <div class="container  mt-5 mb-5">
     <div class = "row">
-    <div class="col-8 p-3">
+    <div class="col-8">
       <div class="mmj">
-      <h1 class ="p-3">{{ my_message }}</h1>
+      <h1 class="p-3">{{ my_message }}</h1>
       <div v-html="problem"></div>
       <p><img :src="image"></p>
       </div>
     </div>
 
-    <div class="col-4 p-3">
+    <div class="col-4">
     <!-- 答案输入框 -->
     <div class="mmj">
     
