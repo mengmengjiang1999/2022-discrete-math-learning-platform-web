@@ -5,17 +5,23 @@
     <h3 v-else>您未登录</h3>
   </div>
   <div>
-    <div v-if="my_status == false" class="mt-3">
-      <a class="mmj-link m-2" aria-current="page" :href="'/login'">登录</a>
-      <a class="mmj-link m-2" aria-current="page" :href="'/regist'">注册</a>
-    </div>
-    <div v-else>
-      <!-- <a class="mmj-link m-2" aria-current="page" :href="'/logout'">退出登录</a> -->
+    <div v-if="my_status ==true" class="mt-3">
+      <!-- <a class="mmj-link m-2" aria-current="page" :href="'/login'">登录</a>
+      <a class="mmj-link m-2" aria-current="page" :href="'/regist'">注册</a> -->
       <form v-on:submit.prevent="submit()">
         <button type="submit" class="btn btn-secondary">
           <span>退出登录</span>
         </button>
       </form>
+    </div>
+    <div v-else class="mt-3">
+      <!-- <form v-on:submit.prevent="submit()">
+        <button type="submit" class="btn btn-secondary">
+          <span>退出登录</span>
+        </button>
+      </form> -->
+      <a class="mmj-link m-2" aria-current="page" :href="'/login'">登录</a>
+      <a class="mmj-link m-2" aria-current="page" :href="'/regist'">注册</a>
     </div>
   </div>
 </template>

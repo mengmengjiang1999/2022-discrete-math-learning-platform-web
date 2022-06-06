@@ -7,7 +7,7 @@
       <div class="mmj">
       <h1 class="p-3">{{ my_message }}</h1>
       <div v-html="problem"></div>
-      <p><img :src="image"></p>
+      <p><img :src="image" class="img-fluid"></p>
       </div>
     </div>
 
