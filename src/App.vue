@@ -13,7 +13,6 @@
   </div>
 </template>
 
-
 <script>
 import HelloPage from "./components/HelloPage.vue";
 import ProblemList from "./components/ProblemList.vue";
@@ -42,19 +41,6 @@ export default {
   },
   created() {},
   methods: {
-    login_status() {
-      axios.post("/login_status").then((res) => {
-        console.log(res.data);
-        if (res.data["status"][0] == true) {
-          // this.$router.push('/home')
-          // <Redirect to="/" />
-          console.log("success");
-          window.location.href = "/";
-        } else {
-          console.log("wrong!");
-        }
-      });
-    },
   },
 };
 </script>
