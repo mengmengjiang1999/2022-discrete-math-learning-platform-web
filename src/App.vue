@@ -14,6 +14,8 @@
 </template>
 
 <script>
+import axios from "axios"
+
 import HelloPage from "./components/HelloPage.vue";
 import ProblemList from "./components/ProblemList.vue";
 import Dijkstra from "./components/Dijkstra.vue";
@@ -39,7 +41,9 @@ export default {
     // StatusBar,
     LoginStatus,
   },
-  created() {},
+  created() {
+    axios.get('/access');
+  },
   methods: {
   },
 };
