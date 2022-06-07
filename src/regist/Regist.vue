@@ -92,7 +92,7 @@
       </div>
       <div class="row">
       <div class="col-6">已有账号？去<a href="/login" rel="noopener">登录</a></div>
-      <div class="col-6 text-end" :key="my_message">{{my_message}}</div>
+      <div class="col-6 text-end text-danger" :key="my_message">{{my_message}}</div>
       </div>
     </div>
   </div>

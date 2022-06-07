@@ -49,7 +49,7 @@
       <!-- <div class="row justify-content-md-center"> -->
       <div class="row">
       <div class="col-6">没有账号？去<a href="/regist" rel="noopener">注册</a></div>
-      <div class="col-6 text-end" :key="my_message">{{my_message}}</div>
+      <div class="col-6 text-end text-danger" :key="my_message">{{my_message}}</div>
       </div>
       <!-- </div> -->
     </div>

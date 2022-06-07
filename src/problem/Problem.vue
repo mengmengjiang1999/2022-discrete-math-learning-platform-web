@@ -20,23 +20,18 @@
             </button>
 
             <div class="form-floating">
-              <textarea
-                class="form-control"
-                placeholder="答案"
-                id="input-answer"
-                v-model="answer"
-              ></textarea>
-              <label for="floatingTextarea">在这里输入答案</label>
+              <input type="text" class="form-control" placeholder="答案" id="input-answer" v-model="answer">
+              <label for="input-answer">在这里输入答案</label>
             </div>
           </form>
 
           <!-- 显示答案是否正确 -->
-          <div class="row">
-            <div v-if="status === 1">答案正确</div>
-            <div v-else-if="status === 2">答案错误</div>
+          <div class="row mt-2">
+            <div v-if="status === 1" class="text-success">答案正确</div>
+            <div v-else-if="status === 2" class="text-danger">答案错误</div>
           </div>
-          <div class="row">
-            <div>
+          <div class="row mt-2">
+            <div class="text-wrap text-break">
               {{ last_answer }}
             </div>
           </div>
@@ -95,14 +90,18 @@ export default {
         },
       })
       .then((response) => {
-        console.log(response.data);
+        // console.log(response.data);
         this.problem = response.data.data_problem;
-        this.image = "data:image/png;base64," + response.data.data_image;
+        this.image = response.data.data_image;
         // 如果获取新题面则更新id，否则不需要更新
         this.problem_id = response.data.problem_id
           ? response.data.problem_id
           : this.problem_id;
-        this.last_answer = response.data.last_answer;
+        if ("last_answer" in response.data) {
+          this.last_answer = `最近提交：${response.data.last_answer}`;
+        } else {
+          this.last_answer = "";
+        }
       })
       .catch((error) => {
         console.log(error);
@@ -119,7 +118,7 @@ export default {
           problem_type: "shortestpath",
         })
         .then((res) => {
-          console.log(res.data);
+          // console.log(res.data);
           if (res.data["answer"] == true) {
             this.status = 1;
           } else {
