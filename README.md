@@ -1,6 +1,6 @@
 # 2022 Discrete Math Learning Platform · Web
 
-[![CI](https://github.com/mengmengjiang1999/2022-discrete-math-learning-platform-web/actions/workflows/ci.yml/badge.svg?branch=bushu)](https://github.com/mengmengjiang1999/2022-discrete-math-learning-platform-web/actions/workflows/ci.yml)
+[![CI](https://github.com/mengmengjiang1999/2022-discrete-math-learning-platform-web/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/mengmengjiang1999/2022-discrete-math-learning-platform-web/actions/workflows/ci.yml)
 
 离散数学智能教学平台的 Web 前端。项目以图算法练习为核心，将随机题目、图结构展示、在线答案判定和学习记录整合为一套清晰的学习体验。
 
