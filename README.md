@@ -1,6 +1,6 @@
-# 离散数学智能教学平台 · Web
+# 2022 离散数学智能教学平台 · Web
 
-离散数学智能教学平台的现代化前端。项目提供随机算法题、在线答案判定和学习记录，需配合后端仓库 [2022-algorithm-learning-platform](https://github.com/mengmengjiang1999/2022-algorithm-learning-platform) 使用。
+`2022-discrete-math-learning-platform-web` 是离散数学智能教学平台的现代化前端。项目提供随机算法题、在线答案判定和学习记录，需配合后端仓库 [2022-algorithm-learning-platform](https://github.com/mengmengjiang1999/2022-algorithm-learning-platform) 使用。
 
 ## 技术栈
 
