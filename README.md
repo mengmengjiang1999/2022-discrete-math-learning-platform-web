@@ -1,54 +1,83 @@
-# 2022vue
+# 离散数学智能教学平台 · Web
 
-## Project setup
-```
+离散数学智能教学平台的现代化前端。项目提供随机算法题、在线答案判定和学习记录，需配合后端仓库 [2022-algorithm-learning-platform](https://github.com/mengmengjiang1999/2022-algorithm-learning-platform) 使用。
+
+## 技术栈
+
+- Vue 3 + Composition API + TypeScript
+- Vue Router 单页路由
+- Vite 构建与开发代理
+- Axios API 客户端
+- ESLint、Prettier、Vitest
+
+## 本地开发
+
+要求 Node.js 22.22.2 或更高版本。
+
+```bash
 npm install
+cp .env.example .env.local
+npm run dev
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+默认开发地址为 `http://127.0.0.1:2333`，Vite 会把 `/api/*` 转发到 `http://127.0.0.1:5000/*`。若后端地址不同，请修改 `.env.local`：
 
-### Compiles and minifies for production
-```
-npm run build
+```dotenv
+VITE_API_TARGET=http://127.0.0.1:5000
 ```
 
-### Lints and fixes files
+## 常用命令
+
+```bash
+npm run dev          # 启动开发服务器
+npm run build        # 类型检查并构建生产包
+npm run preview      # 本地预览生产包
+npm run lint         # 代码检查
+npm run format:check # 格式检查
+npm test             # 单元测试
 ```
-npm run lint
+
+## 部署
+
+执行 `npm run build` 后，将 `dist/` 作为静态站点发布。服务端需完成两项配置：
+
+1. 所有非静态文件路由回退到 `index.html`，以支持 History 路由。
+2. 将 `/api/*` 反向代理到 Flask 后端，并移除 `/api` 前缀。
+
+Nginx 示例：
+
+```nginx
+location / {
+    try_files $uri $uri/ /index.html;
+}
+
+location /api/ {
+    proxy_pass http://127.0.0.1:5000/;
+    proxy_set_header Host $host;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+}
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+如前后端部署在不同域名，可把 `VITE_API_BASE_URL` 设为完整后端地址，并在后端正确配置 CORS 与 Cookie 策略。
 
-## install 
+## API 约定
 
-npm install --save axios vue-axios
+前端使用以下后端接口：
 
-vue跨域请求问题如何解决
-https://www.jianshu.com/p/e87d200fa548
+| 方法   | 路径            | 用途           |
+| ------ | --------------- | -------------- |
+| `GET`  | `/login_status` | 查询登录状态   |
+| `POST` | `/login`        | 登录           |
+| `POST` | `/logout`       | 退出登录       |
+| `GET`  | `/problemlist`  | 获取题目类型   |
+| `GET`  | `/algorithm`    | 创建或读取题目 |
+| `POST` | `/algorithm`    | 提交答案       |
+| `GET`  | `/records`      | 获取学习记录   |
 
-npm install markdown-it --save # 本体
+注册功能与后端当前策略一致，暂不对外开放。
 
-npm install markdown-it-highlightjs --save # 代码高亮
+## 仓库说明
 
-npm install markdown-it-katex --save # latex 支持
-
-TypeError:无法读取未定义的属性“NormalModule”
-https://www.5axxw.com/questions/content/gr6o7c
-
-markdown to html:
-https://blog.openreplay.com/how-to-parse-and-render-markdown-in-vuejs
-
-最终使用的方案：pandoc
-https://www.arthurkoziel.com/convert-md-to-html-pandoc/
-
-后端给前端显示图片
-https://stackoverflow.com/questions/8499633/how-to-display-base64-images-in-html
-
-npm install -D less less-loader
-
-<script src="https://unpkg.com/vue"></script>
-<script src="https://unpkg.com/vue-router"></script>
+- 本仓库只包含前端源码，不提交环境变量、构建产物、日志或编辑器配置。
+- 页面不依赖第三方 CDN，避免部署时的外部可用性与隐私问题。
+- 不要把密钥放进 `VITE_*` 变量；这类变量会被打包到浏览器代码中。
